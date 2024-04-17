@@ -23,6 +23,7 @@ import {LogoApiService} from "./shared/services/logo-api.service";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import { FooterContentComponent } from './public/components/footer-content/footer-content.component';
+import { LanguageSwitcherComponent } from './public/components/language-switcher/language-switcher.component';
 
 // HttpLoaderFactory function
 export function HttpLoaderFactory(http: HttpClient) {
@@ -34,7 +35,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     ArticleListComponent,
     SideNavigationBarComponent,
-    FooterContentComponent
+    FooterContentComponent,
+    LanguageSwitcherComponent
   ],
   imports: [
     BrowserModule,
