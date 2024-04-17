@@ -17,11 +17,15 @@ import {MatCardModule} from "@angular/material/card";
 import {MatMenuModule} from "@angular/material/menu";
 import {NgOptimizedImage} from "@angular/common";
 import { ArticleListComponent } from './news/components/article-list/article-list.component';
+import { SideNavigationBarComponent } from './public/components/side-navigation-bar/side-navigation-bar.component';
+import {NewsApiService} from "./news/services/news-api.service";
+import {LogoApiService} from "./shared/services/logo-api.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticleListComponent
+    ArticleListComponent,
+    SideNavigationBarComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { ArticleListComponent } from './news/components/article-list/article-lis
     NgOptimizedImage
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    NewsApiService,
+    LogoApiService
   ],
   bootstrap: [AppComponent]
 })
